@@ -1,0 +1,23 @@
+.user-item {
+  border: 1px solid #37373e;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-item__separator {
+  border: none;
+  border-top: 1px solid #323232;
+  margin: 8px 0;
+}
+
+.user-item__name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #b3b2b2;
+}
+
+.user-item__balance {
+  font-size: 0.875rem;
+  color: #8d8d8d;
+}
