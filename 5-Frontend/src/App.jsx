@@ -7,6 +7,8 @@ function App() {
   const [minBalance, setMinBalance] = useState(0);
   const [name, setName] = useState("");
   const [users, setUsers] = useState([]);
+  const [sortBy, setSortBy] = useState("balance");
+  const [sortOrder, setSortOrder] = useState("desc");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -50,12 +52,18 @@ function App() {
           setMinBalance={setMinBalance}
           name={name}
           setName={setName}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          sortOrder={sortOrder}
+          setSortOrder={setSortOrder}
         />
 
         <UserList
           users={users.filter((user) =>
             name ? user.name?.toLowerCase().includes(name.toLowerCase()) : true,
           )}
+          sortBy={sortBy}
+          sortOrder={sortOrder}
           onUserClick={(user) => console.log("Click to check callback: ", user)}
         />
       </section>
